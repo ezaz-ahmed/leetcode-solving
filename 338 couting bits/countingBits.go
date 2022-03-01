@@ -25,7 +25,7 @@ func main() {
 	// 	ans[i] = count
 	// }
 
-	fmt.Println(ans)
+	// fmt.Println(ans)
 
 	// This is solution of others.. -> Better approach
 
