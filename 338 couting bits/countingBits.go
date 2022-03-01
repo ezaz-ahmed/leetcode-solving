@@ -8,7 +8,7 @@ func main() {
 
 	ans := make([]int, n+1)
 
-	// It was my solution
+	// => It was my solution
 
 	// for i := 0; i <= n; i++ {
 
@@ -27,12 +27,23 @@ func main() {
 
 	// fmt.Println(ans)
 
-	// This is solution of others.. -> Better approach
+	// => This is solution of others.. -> Better approach
 
-	ans[0] = 0
+	// ans[0] = 0
+
+	// for i := 1; i <= n; i++ {
+	// 	ans[i] = ans[i/2] + i%2
+	// }
+
+	// => Using Dynamic Programming
+
+	offset := 1
 
 	for i := 1; i <= n; i++ {
-		ans[i] = ans[i/2] + i%2
+		if offset*2 == i {
+			offset = i
+		}
+		ans[i] = 1 + ans[i-offset]
 	}
 
 	fmt.Println(ans)
