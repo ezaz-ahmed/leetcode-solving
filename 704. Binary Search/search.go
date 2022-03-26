@@ -12,7 +12,13 @@ func search(nums []int, target int) int {
 
 	if nums[mid] == target {
 		index = mid
+	} else if nums[mid] < mid {
+
 	}
 
 	return index
+}
+
+func bs() int {
+	return 5
 }
