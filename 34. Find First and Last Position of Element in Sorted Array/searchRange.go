@@ -10,6 +10,7 @@ func main() {
 }
 
 // I wasn't able to solve it...
+
 func searchRange(nums []int, target int) []int {
 	output := []int{-1, -1}
 	l, r := 0, len(nums)-1
