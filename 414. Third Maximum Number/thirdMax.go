@@ -29,4 +29,6 @@ func thirdMax(nums []int) int {
 			third_max = num
 		}
 	}
+
+	return 0
 }
