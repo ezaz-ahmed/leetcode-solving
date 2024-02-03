@@ -2,14 +2,14 @@ package main
 
 import (
 	"fmt"
-	"slices"
+	"sort"
 )
 
 func divideArray(nums []int, k int) [][]int {
-	slices.Sort(nums)
+	sort.Ints(nums)
 	results := [][]int{}
 
-	for i := 0; i < len(nums); i = i + 3 {
+	for i := 0; i < len(nums); i += 3 {
 		if nums[i+2]-nums[i] > k {
 			return [][]int{}
 		} else {
